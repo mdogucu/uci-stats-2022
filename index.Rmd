@@ -23,6 +23,8 @@ library(tidyverse)
 library(palmerpenguins)
 
 xaringanExtra::use_slide_tone()
+theme_set(theme_gray(base_size = 14))
+
 ```
 
 
@@ -320,12 +322,13 @@ class: middle
 ### Color Blindness Simulator 
 
 ```{r echo=TRUE, eval=FALSE}
-colorblindr::cvd_grid(fig)
+colorblindr::cvd_grid(fig) 
 ```
 
-```{r fig.align='center', out.width='45%', fig.alt="A 2 by 2 grid of four scatterplots. The scatterplots are the same as the scatterplot in the previous figure except for colors. From left to right and top to bottom the plots read deutanomly, protanomly, tritanomly, and desaturated"}
+```{r fig.align='center', out.width='40%', fig.alt="A 2 by 2 grid of four scatterplots. The scatterplots are the same as the scatterplot in the previous figure except for colors. From left to right and top to bottom the plots read deutanomly, protanomly, tritanomly, and desaturated"}
 library(colorblindr)
-cvd_grid(fig, severity = 1)
+cvd_grid(fig, severity = 1) +
+  theme_gray(base_size = 12)
 ```
 
 
