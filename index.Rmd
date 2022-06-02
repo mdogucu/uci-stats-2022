@@ -1,7 +1,7 @@
 ---
 title: "Teaching Accessibility in the Data Science Curriculum"
 author: "Mine Dogucu"
-subtitle: "Department of Statistics Seminar at University of California Irvine <br> [bit.ly/dogucu-talks](https://bit.ly/dogucu-talks)"
+subtitle: "Department of Statistics Seminar at University of California Irvine <br> [mdogucu.github.io/uci-stats-2022](https://mdogucu.github.io/uci-stats-2022)"
 date: "2022-06-02"
 output:
   xaringan::moon_reader:
@@ -69,9 +69,149 @@ Americans With Disabilities Act (ADA) of 1990 prohibits discrimination against i
 
 **Ableism** is discrimination in favor of able-bodied people.
 
+---
+
+class:center
+
+```{r echo=FALSE, fig.align='center', out.width="25%", fig.alt="a hex shaped logo with shiny green-pink disco ball and purple starry background. There is text that says Bayes Rules!"}
+knitr::include_graphics("img/bayes-rules-hex.png")
+```
+
+
+.pull-left[
+<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg="nest"></script>
+
+<i class="fas fa-book fa-2x" aria-hidden="true" title="Book icon"></i>
+
+[Bayes Rules! An Introduction to Applied Bayesian Modeling](https://bayesrulesbook.com)
+
+]
+
+.pull-right[
+
+<i class="fab fa-r-project fa-2x" aria-hidden="true" title="R logo"></i>
+
+[{bayesrules}](https://www.github.com/bayes-rules/bayesrules)
+]
 
 ---
 
+
+class: middle 
+
+.pull-left[
+.center[
+
+ 
+<img src="img/alicia.jpeg"
+        alt="A headshot of a woman with long blonde hair wearing a brownish yellow tshirt and a red and pink floral silk scarf wrapped around her neck."
+        style="width:165px; margin-top:20px; border: 3px solid whitesmoke; padding: 10px;">
+
+Alicia Johnson          
+.font-20[Macalester College]
+        
+[`r fontawesome::fa(name = "link")`](https://ajohns24.github.io/portfolio)
+[`r fontawesome::fa(name = "github")`](https://github.com/ajohns24)
+
+]
+]
+
+.pull-right[
+.center[
+<img src="img/miles.png"
+        alt="A headshot of a man with short dark hair, and a dark moustache. He is wearing a blue button up shirt and dark gray jacket"
+        style="width:165px; margin-top:20px; border: 3px solid whitesmoke; padding: 10px;">
+
+Miles Ott  
+.font-20[Twitter]
+
+[`r fontawesome::fa(name = "link")`](https://milesott.com/)
+[`r fontawesome::fa(name = "github")`](https://github.com/MilesOtt)
+[`r fontawesome::fa(name = "twitter")`](https://twitter.com/Miles_Ott)
+
+]
+]
+
+---
+
+
+class: middle
+
+[Dogucu, M., Johnson, A. A., & Ott, M. (2021). Framework for Accessible and Inclusive Teaching Materials for Statistics and Data Science Courses. arXiv preprint arXiv:2110.06355.](https://arxiv.org/abs/2110.06355)
+
+
+---
+
+
+class: center middle
+
+### Accessibility and Inclusion
+
+```{r checklist, echo=FALSE}
+options(knitr.kable.NA = '')
+readxl::read_xlsx("accessibility-checklist.xlsx") %>%  
+  slice(1:3) %>% 
+  knitr::kable() 
+  
+```
+
+
+---
+
+class: center middle
+
+
+```{r checklist2, echo=FALSE}
+readxl::read_xlsx("accessibility-checklist.xlsx") %>%  
+  slice(4:5) %>% 
+  knitr::kable() 
+  
+```
+
+---
+
+class: center middle
+
+
+```{r checklist3, echo=FALSE}
+readxl::read_xlsx("accessibility-checklist.xlsx") %>%  
+  slice(6:11) %>% 
+  knitr::kable() 
+  
+```
+
+
+---
+
+class: middle
+
+## Teaching Accessibility
+
+I was supported by the [Teach Access](https://teachaccess.org/) network. 
+
+
+```{r echo=FALSE, fig.align='center', out.width="40%", fig.alt="Teach Access logo that is an illustration of a bridge"}
+knitr::include_graphics("img/teach_access_logo.jpg")
+```
+
+---
+
+class: middle
+
+.center[
+<img src="img/jooyoung.jpeg"
+        alt="A headshot of a man with short, straight, dark hair. He is wearing a white button up shirt and black rectangular glasses."
+        style="width:165px; margin-top:20px; border: 3px solid whitesmoke; padding: 10px;">
+
+JooYoung Seo  
+.font-20[University of Illonois Urbana-Champaign]
+
+[`r fontawesome::fa(name = "link")`](https://jooyoungseo.github.io/)
+[`r fontawesome::fa(name = "github")`](https://github.com/jooyoungseo)
+[`r fontawesome::fa(name = "twitter")`](https://twitter.com/seo_jooyoung)
+
+]
+---
 class: middle
 
 [Computing Competencies for Undergraduate Data Science Curricula](https://dstf.acm.org/DSReportDraft2Full.pdf) by Association for Computing Machinery (ACM) Data Science Task Force
@@ -280,6 +420,69 @@ class: middle
 
 ---
 
+class: center middle 
+
+## (some) Chunk Options in R Markdown
+
+<table align = "center">
+
+<tr>
+
+<td>echo = FALSE</td>
+<td>hides the code</td>
+
+</tr>
+
+
+<tr>
+
+<td>warning = FALSE</td>
+<td>hides warning</td>
+
+</tr>
+
+<tr>
+
+<td>error = TRUE</td>
+<td>renders despite errors and displays the error</td>
+
+</tr>
+
+<tr>
+
+<td>fig.cap = "Some figure caption"</td>
+<td>creates a figure caption</td>
+
+</tr>
+
+<tr>
+
+<td>fig.align = "center"</td>
+<td>centers the figure in the page</td>
+
+</tr>
+
+<tr>
+
+<td>fig.alt = "Some alternate text for figure"</td>
+<td>creates alternate text for figures</td>
+
+</tr>
+
+
+
+</table>
+
+---
+
+class: middle
+
+```{r fig.alt="GitHub issue created on RStudio's RMarkdown repo asking for fig.alt option to be created", fig.align='center', out.width="100%"}
+knitr::include_graphics("img/alttext-github-issue.png")
+```
+
+---
+
 class: middle
 
 ### Manual Alternate Text
@@ -370,13 +573,41 @@ class: middle
 Data tactulization refers to making data visualization in a form so that it can be touchable by fingers. 
 
 
-
-
 .center[
 
 <iframe  width="560" height="315" src="https://www.youtube.com/embed/ClI555l4Z1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[tactileR](https://github.com/jooyoungseo/tactileR) package in R
+]
+
+
+---
+
+class: middle
+
+## Data Tactualization
+
+
+.pull-left[
+
+```{r eval=FALSE, echo=TRUE}
+library(tactileR)
+brl_begin(file = 'tactile.pdf', 
+          pt = 11, 
+          paper = 'special', font='BRL')
+hist(airquality$Ozone)
+brl_end()
+```
+
+]
+
+<!--the swell touch paper through swell form heating machine-->
+
+
+.pull-right[
+
+```{r echo=FALSE, fig.align='center', out.width="80%", fig.alt="A histogram with x and y labels, title displayed in Braille."}
+knitr::include_graphics("img/hist-braille.png")
+```
 
 ]
 
@@ -385,7 +616,6 @@ Data tactulization refers to making data visualization in a form so that it can 
 class: middle
 
 ## When?
-
 
 
 - Stats 5 - Seminar in Data Science
@@ -408,19 +638,11 @@ class: middle
 
 - Students should be assessed on the practice of accessibility practices
 
-- Students should be able to take away this knowledge from non-data specific courses.
+- Students should be able to take away this knowledge to non-data specific courses.
 
 
 ---
 
-class: middle
-
-## Acknowledgment
-
-Dogucu has been supported by the [Teach Access](https://teachaccess.org/) network. 
-
-
----
 
 class: middle center
 
