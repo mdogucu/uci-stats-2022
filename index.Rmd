@@ -29,8 +29,6 @@ xaringanExtra::use_slide_tone()
 
 
 
-
-
 # `r rmarkdown::metadata$title`
 ## `r rmarkdown::metadata$author`
 ### `r rmarkdown::metadata$subtitle`
